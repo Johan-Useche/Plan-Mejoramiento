@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reproductor de Audio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+    <div class="audio-player">
+        <img src="./images/cover.png" alt="Carátula del álbum" class="album-cover">
+        <div class="track-info">
+            <h3>Album Rock</h3>
+            <p>Track 01 - Song Rock</p>
+        </div>
+        <audio id="audio" src="./audio/sample.mp3"></audio>
+        <div class="controls">
+            <button id="play" class="btn">
+                <img src="./images/btn-play.svg" alt="Play">
+            </button>
+            <button id="pause" class="btn">
+                <img src="./images/btn-pause.svg" alt="Pause">
+            </button>
+            <button id="mute" class="btn">
+                <img src="./images/btn-volume.svg" alt="Mute">
+            </button>
+
+            <div>
+                <input type="range" id="progress" value="0" max="100" class="progress-bar">
+            </div>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
+

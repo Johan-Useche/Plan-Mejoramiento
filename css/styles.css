@@ -1,0 +1,322 @@
+
+body {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    background-color: #E1DAC6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.audio-player {
+    background-color: #726F59;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    width: 347px;
+    height: 21%;
+    position: relative;
+}
+
+
+.album-cover {
+    width: 120px;
+    height: 120px;
+    border-radius: 10px;
+    float: left;
+    margin-right: 20px;
+}
+
+.player-content {
+    margin-left: 140px; /* Espacio para la imagen del álbum */
+    text-align: left;
+}
+
+.track-info {
+    color: #D5CFBB;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.track-info h3 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.track-info p {
+    margin: 5px 0 0;
+    font-size: 12px;
+    color: #96927C;
+}
+
+.controls {
+    display: flex;
+    gap: 15px;
+    margin: 10px 0;
+    position: relative;
+    left: -9px;
+}
+
+
+.btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.btn img {
+    width: 40px; /* Tamaño aumentado */
+    height: 40px; /* Tamaño aumentado */
+}
+
+.progress-bar-container {
+    margin-top: 10px; /* Espaciado entre los botones y la barra */
+    display: flex;
+    justify-content: flex-end; /* Alineación según botones */
+}
+
+.progress-bar {
+    position: relative;
+    /* width: 100%; */
+    position: relative;
+    width: 203px;
+    /* -webkit-appearance: none; */
+    appearance: none;
+    height: 7px;
+    background: #E1DAC6;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+    top: 51px;
+    left: -199px;
+}
+
+
+
+.progress-bar::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: #E1DAC6;
+    border: 2px solid #7f7c68;
+    cursor: pointer;
+}
+.progress-bar::-moz-range-thumb {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #fff;
+    border: 2px solid #7f7c68;
+    cursor: pointer;
+}
+
+
+/* responsive */
+
+/* Estilo para pantallas grandes (768px y más) */
+@media (min-width: 800px) {
+    .audio-player {
+        width: 331px;
+        height: 127px;
+        padding: 20px;
+    }
+    
+
+    .album-cover {
+        width: 120px;
+        height: 120px;
+        position: relative;
+        left: -5px;
+    }
+
+    
+
+    .player-content {
+        margin-left: 140px; /* Espacio a la izquierda para la imagen del álbum */
+    }
+
+    .controls {
+        gap: 15px; /* Espacio entre los controles */
+    }
+
+    .progress-bar {
+        width: 205px;
+        top: 49px;
+        left: -209px;
+    }
+
+    .progress-bar::-webkit-slider-thumb {
+        width: 18px; /* Tamaño original del thumb */
+        height: 18px;
+        background: #E1DAC6;
+        border: 2px solid #7f7c68;
+    }
+
+    .progress-bar::-moz-range-thumb {
+        width: 18px; /* Tamaño original del thumb */
+        height: 18px;
+        background: #fff;
+        border: 2px solid #7f7c68;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .audio-player {
+        width: 49%;
+        height: auto;
+        padding: 15;
+        left: 31px;
+    }
+    
+    
+    
+    .album-cover {
+        width: 100px; /* Tamaño ajustado de la imagen */
+        height: 17%;
+    }
+
+    .player-content {
+        margin-left: 120px; /* Ajuste del espacio para la imagen del álbum */
+    }
+
+    .controls {
+        gap: 12px; /* Ajuste del espacio entre los controles */
+    }
+
+    .progress-bar {
+        width: 191px;
+        position: relative;
+        top: 44px;
+        left: -189px;
+    }
+    
+}
+
+@media (max-width: 428px) {
+    .audio-player {
+        width: 69%;
+        height: 127px;
+        padding: 10px;
+        position: relative;
+        left: 4px;
+        top: 37px;
+    }
+    
+
+    
+    
+    
+    
+
+    .album-cover {
+        width: 115px;
+        height: 113px;
+
+    }
+
+    .player-content {
+        margin-left: 100px; /* Ajuste del espacio para pantallas muy pequeñas */
+    }
+
+    .track-info h3 {
+        font-size: 16px; /* Texto más pequeño */
+    }
+
+    .track-info p {
+        font-size: 12px;
+    }
+
+    .controls {
+        gap: 10px; /* Espacio reducido entre los botones */
+    }
+    .progress-bar {
+        width: 179px;
+        left: -185px;
+        top: 42px;
+    
+    }
+
+    .progress-bar::-webkit-slider-thumb {
+        width: 18px; /* Mantener el tamaño original del thumb */
+        height: 18px;
+        background: #E1DAC6;
+        border: 2px solid #7f7c68;
+    }
+
+    .progress-bar::-moz-range-thumb {
+        width: 18px; /* Mantener el tamaño original del thumb */
+        height: 18px;
+        background: #fff;
+        border: 2px solid #7f7c68;
+    }
+}
+
+
+@media (max-width: 400px) {
+    .audio-player {
+        width: 74%;
+        height: auto;
+        padding: 15px;
+        position: relative;
+        top: 0;
+        left: 0;
+    }
+
+
+    .album-cover {
+        width: 100px;
+        height: 100px;
+        margin-right: 10px;
+        position: relative;
+        left: -5px;
+    }
+    
+
+    .player-content {
+        margin-left: 120px; /* Ajustar el espacio para la imagen */
+        font-size: 12px; /* Reducir el tamaño de fuente general */
+    }
+
+    .track-info h3 {
+        font-size: 14px; /* Reducir tamaño del título */
+    }
+
+    .track-info p {
+        font-size: 11px; /* Reducir tamaño del texto de descripción */
+    }
+
+    .controls {
+        gap: 8px; /* Reducir el espacio entre los controles */
+    }
+
+    .btn img {
+        width: 35px; /* Reducir tamaño de los íconos */
+        height: 35px;
+    }
+
+    .progress-bar-container {
+        margin-top: 8px; /* Reducir espaciado superior */
+    }
+
+    .progress-bar {
+        width: 161px;
+        top: 36px;
+        left: -164px;
+    }
+
+    .progress-bar::-webkit-slider-thumb {
+        width: 14px; /* Reducir el tamaño del thumb */
+        height: 14px;
+    }
+
+    .progress-bar::-moz-range-thumb {
+        width: 14px;
+        height: 14px;
+    }
+}
